@@ -2,10 +2,7 @@ package com.example.demo.domain;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * User Domain Object Class.
@@ -21,6 +18,7 @@ import javax.persistence.Id;
 @Builder
 @Data
 @Entity
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue
