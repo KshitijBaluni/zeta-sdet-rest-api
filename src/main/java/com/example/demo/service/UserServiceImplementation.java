@@ -18,16 +18,32 @@ public class UserServiceImplementation implements UserService {
     @Autowired
     private UserRepository userRepository;
 
+    /**
+     * Get list of users.
+     *
+     * @return iterable users list.
+     */
     @Override
     public Iterable<User> getUsers() {
         return userRepository.findAll();
     }
 
+    /**
+     * Get user with id.
+     *
+     * @param id user id
+     * @return user
+     */
     @Override
     public Optional<User> getUser(Long id) {
         return userRepository.findById(id);
     }
 
+    /**
+     * Create user.
+     *
+     * @param user user
+     */
     @Override
     public void createUser(User user) {
         if (user != null)
